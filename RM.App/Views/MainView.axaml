@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RM.App.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="150"
+        x:Class="RM.App.Views.MainView"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RM.App">
+    <Design.DataContext>
+        <vm:MainViewModel/>
+    </Design.DataContext>
+        <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="_Справочники">
+        <MenuItem Header="_Единицы работ" Command = "{Binding OpenWorkUnitsReferenceCommand}"/>
+        <MenuItem Header="_Виды работ"/>
+        <MenuItem Header="_Исполнители"/>
+        <MenuItem Header="_Договора"/>
+        <Separator/>
+        <MenuItem Header="_Выйти"/>
+      </MenuItem>
+    </Menu>
+    <TextBlock/>
+  </DockPanel>
+
+</Window>
